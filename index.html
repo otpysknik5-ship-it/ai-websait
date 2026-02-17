@@ -104,7 +104,52 @@
       margin: 2rem 0;
       font-size: 0.9rem;
       color: #666;
-    }
+    }/* === ТЁМНАЯ ТЕМА === */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-theme header {
+  background: linear-gradient(135deg, #4a69bd, #6a89cc);
+}
+
+body.dark-theme h1,
+body.dark-theme h2 {
+  color: #bb86fc;
+}
+
+body.dark-theme .feature-card,
+body.dark-theme footer {
+  background: #1e1e1e;
+  color: #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-theme footer {
+  border-top: 1px solid #333;
+}
+
+/* Кнопка переключения темы */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  color: white;
+}
   </style>
 </head>
 <body>
@@ -192,11 +237,38 @@
       <p>
         Но как инструмент для вдохновения, черновика или объяснения темы — он просто волшебный.
       </p>
-    </section>
+    </section><!-- Статья: Галлюцинации ИИ -->
+<section>
+  <h2>Что такое галлюцинации ИИ?</h2>
+  <p>
+    Галлюцинации ИИ — это когда искусственный интеллект выдаёт информацию, которая звучит правдоподобно, 
+    но на самом деле <strong>неверна или вымышленна</strong>.
+  </p>
+  <p>
+    Например, ChatGPT может придумать:
+    - Не существующую книгу с автором и цитатой
+    - Фальшивую дату исторического события
+    - Несуществующий закон или статью
+  </p>
+  <div style="text-align:center; margin:1.5rem 0;">
+    <img src="https://picsum.photos/600/300?blur=1&grayscale&random=1" 
+         alt="Галлюцинации ИИ — когда ИИ фантазирует" 
+         style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+    <p style="font-size:0.9rem; color:#666; margin-top:0.5rem;">ИИ не врёт — он просто «угадывает» слишком уверенно</p>
+  </div>
+  <p>
+    Почему так происходит? Потому что ИИ не «помнит» факты — он предсказывает, 
+    какой текст наиболее вероятен на основе того, что видел в обучающих данных.
+  </p>
+  <p>
+    <strong>Важно:</strong> никогда не доверяй ИИ на 100% в учёбе, медицине, юриспруденции или финансах. 
+    Всегда проверяй информацию через надёжные источники!
+  </p>
+</section>
 
     <!-- Счётчик и кнопки -->
     <div class="footer-extra">
-      <img src="https://img.shields.io/badge/ИИ%20для%20всех-%F0%9F%A4%96-blue?style=flat&logo=github" alt="ИИ-сайт">
+      <img src="https://views.whatilearened.today/views/github/otpysknik5-ship-it/Ai-websaite.svg?cache=reset"
       <br><br>
       <span>✨ Посетители сегодня: </span>
       <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://otpysknik5-ship-it.github.io/Ai-websaite/&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=сегодня&edge_flat=false" alt="счётчик посещений">
@@ -232,6 +304,32 @@
       }
     });
   </script>
+<!-- Переключатель темы -->
+<button class="theme-toggle" id="themeToggle">🌙</button>
 
+<script>
+  // Загружаем сохранённую тему
+  const savedTheme = localStorage.getItem('theme');
+  const toggleBtn = document.getElementById('themeToggle');
+
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+    toggleBtn.textContent = '☀️';
+  }
+
+  // Переключение
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    const isDark = document.body.classList.contains('dark-theme');
+    
+    if (isDark) {
+      localStorage.setItem('theme', 'dark');
+      toggleBtn.textContent = '☀️';
+    } else {
+      localStorage.setItem('theme', 'light');
+      toggleBtn.textContent = '🌙';
+    }
+  });
+</script>
 </body>
 </html>
