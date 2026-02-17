@@ -9,6 +9,26 @@
 <meta name="googlebot" content="index, follow">
 <meta name="description" content="Простой сайт про ИИ: как работает, зачем нужен и как создать свой бот. Для всех — без сложностей.">
   <style>
+    <!-- Анти-копирование (базовая защита) -->
+<style>
+  body {
+    -webkit-user-select: none; /* Chrome, Safari, Edge */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Non-prefixed version */
+  }
+  /* Запрет правой кнопки мыши (не идеально, но отпугнёт новичков) */
+  body {
+    oncontextmenu: return false;
+  }
+</style>
+<script>
+  // Более мягкая защита: предупреждение при копировании
+  document.addEventListener('copy', function(e) {
+    e.preventDefault();
+    alert('Контент защищён. Спасибо за интерес — напишите автору в Telegram: @SVIBRO');
+  });
+</script>
     * {
       margin: 0;
       padding: 0;
