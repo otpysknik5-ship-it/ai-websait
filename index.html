@@ -1,126 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ИИ для всех</title>
-  <!-- Защита и SEO -->
-<meta name="robots" content="index, follow">
-<meta name="googlebot" content="index, follow">
-<meta name="description" content="Простой сайт про ИИ: как работает, зачем нужен и как создать свой бот. Для всех — без сложностей.">
-  </style>
-    <!-- Анти-копирование (базовая защита) -->
-<style>
-  body {
-    -webkit-user-select: none; /* Chrome, Safari, Edge */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* Internet Explorer/Edge */
-    user-select: none;         /* Non-prefixed version */
-  }
-  /* Запрет правой кнопки мыши (не идеально, но отпугнёт новичков) */
-  body {
-    oncontextmenu: return false;
-  }
-</style>
-<script>
-  // Более мягкая защита: предупреждение при копировании
-  document.addEventListener('copy', function(e) {
-    e.preventDefault();
-    alert('Контент защищён. Спасибо за интерес — напишите автору в Telegram: @SVIBRO');
-  });
-</script> }
 
-    section 
-  }
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Простой сайт про искусственный интеллект — как работает, зачем нужен и как начать. Для всех — без сложностей.">
 
-    /* Кнопка "Наверх" */
-    .back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #6e8efb;
-      color: white;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-      z-index: 100;
+  <!-- Open Graph (для Telegram, ВК, WhatsApp) -->
+  <meta property="og:title" content="ИИ для всех">
+  <meta property="og:description" content="Как работает ИИ, галлюцинации, боты и как создать свой мини-сайт за 10 минут.">
+  <meta property="og:url" content="https://ai-websait.pages.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://picsum.photos/600/300?grayscale">
+
+  <!-- Защита от копирования -->
+  <style>
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
-    .back-to-top.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* Стили для счётчика и кнопок внизу */
-    .footer-extra {
-      text-align: center;
-      margin: 2rem 0;
-      font-size: 0.9rem;
-      color: #666;
-    }/* === ТЁМНАЯ ТЕМА === */
-body.dark-theme {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.dark-theme header {
-  background: linear-gradient(135deg, #4a69bd, #6a89cc);
-}
-
-body.dark-theme h1,
-body.dark-theme h2 {
-  color: #bb86fc;
-}
-
-body.dark-theme .feature-card,
-body.dark-theme footer {
-  background: #1e1e1e;
-  color: #ccc;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-body.dark-theme footer {
-  border-top: 1px solid #333;
-}
-
-/* Кнопка переключения темы */
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 100;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(4px);
-  color: white;
-}
   </style>
+  <script>
+    document.addEventListener('copy', function(e) {
+      e.preventDefault();
+      alert('Контент защищён. Спасибо за интерес — напишите автору в Telegram: @SVIBRO');
+    });
+  </script>
 </head>
 <body>
 
-  <header>
+  <header style="background: linear-gradient(135deg, #6e8efb, #a777e3); color: white; text-align: center; padding: 2rem 1rem;">
     <h1>Искусственный Интеллект</h1>
     <p>Просто, понятно и без лишней сложности</p>
   </header>
 
-  <div class="container">
+  <div style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+
     <section>
       <h2>Что такое ИИ?</h2>
       <p>
@@ -137,16 +57,16 @@ body.dark-theme footer {
 
     <section>
       <h2>Примеры применения</h2>
-      <div class="features">
-        <div class="feature-card">
+      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem;">
+        <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); flex: 1 1 250px;">
           <h3>Чат-боты</h3>
           <p>Общение с пользователями 24/7, поддержка клиентов.</p>
         </div>
-        <div class="feature-card">
+        <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); flex: 1 1 250px;">
           <h3>Рекомендации</h3>
           <p>Фильмы, музыка, товары — всё под ваш вкус.</p>
         </div>
-        <div class="feature-card">
+        <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); flex: 1 1 250px;">
           <h3>Автопилот</h3>
           <p>Беспилотные автомобили и дроны.</p>
         </div>
@@ -159,14 +79,8 @@ body.dark-theme footer {
         Нейросеть — это компьютерная система, которая учится решать задачи, глядя на примеры. 
         Она устроена похоже на человеческий мозг: состоит из множества «нейронов», которые передают сигналы друг другу.
       </p>
-      <p>
-        Например, если показать нейросети тысячи фото кошек и собак с надписями «кот» или «собака»,
-        она научится отличать их сама — даже на новых, незнакомых ей фотографиях!
-      </p>
       <div style="text-align:center; margin:1.5rem 0;">
-        <img src="https://picsum.photos/600/300?grayscale&blur=2" 
-             alt="Схема нейросети" 
-             style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+        <img src="https://picsum.photos/600/300?grayscale&blur=2" alt="Схема нейросети" style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
         <p style="font-size:0.9rem; color:#666; margin-top:0.5rem;">Нейросеть обрабатывает данные слоями — от простого к сложному</p>
       </div>
       <p>
@@ -181,117 +95,120 @@ body.dark-theme footer {
         ChatGPT — это умный чат-бот, созданный компанией OpenAI. Он умеет отвечать на вопросы, писать тексты, 
         объяснять сложные темы простыми словами и даже сочинять стихи!
       </p>
-      <p>
-        В основе ChatGPT лежит огромная нейросеть, обученная на миллиардах текстов из интернета. 
-        Но он не «знает» всё — он <strong>угадывает</strong> наиболее вероятный ответ, основываясь на том, что видел раньше.
-      </p>
       <div style="text-align:center; margin:1.5rem 0;">
-        <img src="https://picsum.photos/600/300?blur=1&grayscale" 
-             alt="ChatGPT — умный помощник" 
-             style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+        <img src="https://picsum.photos/600/300?blur=1&grayscale" alt="ChatGPT — умный помощник" style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
         <p style="font-size:0.9rem; color:#666; margin-top:0.5rem;">ChatGPT — как друг, который много читал и готов помочь</p>
       </div>
       <p>
         Важно помнить: ChatGPT может ошибаться или выдавать вымышленные факты (это называется «галлюцинации»). 
         Поэтому его ответы стоит проверять — особенно в учёбе и работе.
       </p>
+    </section>
+
+    <section>
+      <h2>Что такое галлюцинации ИИ?</h2>
       <p>
-        Но как инструмент для вдохновения, черновика или объяснения темы — он просто волшебный.
+        Галлюцинации ИИ — это когда искусственный интеллект выдаёт информацию, которая звучит правдоподобно, 
+        но на самом деле <strong>неверна или вымышленна</strong>.
       </p>
-    </section><!-- Статья: Галлюцинации ИИ -->
-<section>
-  <h2>Что такое галлюцинации ИИ?</h2>
-  <p>
-    Галлюцинации ИИ — это когда искусственный интеллект выдаёт информацию, которая звучит правдоподобно, 
-    но на самом деле <strong>неверна или вымышленна</strong>.
-  </p>
-  <p>
-    Например, ChatGPT может придумать:
-    - Не существующую книгу с автором и цитатой
-    - Фальшивую дату исторического события
-    - Несуществующий закон или статью
-  </p>
-  <div style="text-align:center; margin:1.5rem 0;">
-    <img src="https://picsum.photos/600/300?blur=1&grayscale&random=1" 
-         alt="Галлюцинации ИИ — когда ИИ фантазирует" 
-         style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-    <p style="font-size:0.9rem; color:#666; margin-top:0.5rem;">ИИ не врёт — он просто «угадывает» слишком уверенно</p>
-  </div>
-  <p>
-    Почему так происходит? Потому что ИИ не «помнит» факты — он предсказывает, 
-    какой текст наиболее вероятен на основе того, что видел в обучающих данных.
-  </p>
-  <p>
-    <strong>Важно:</strong> никогда не доверяй ИИ на 100% в учёбе, медицине, юриспруденции или финансах. 
-    Всегда проверяй информацию через надёжные источники!
-  </p>
-</section>
+      <div style="text-align:center; margin:1.5rem 0;">
+        <img src="https://picsum.photos/600/300?blur=1&grayscale&random=1" alt="Галлюцинации ИИ" style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+        <p style="font-size:0.9rem; color:#666; margin-top:0.5rem;">ИИ не врёт — он просто «угадывает» слишком уверенно</p>
+      </div>
+      <p>
+        Почему так происходит? Потому что ИИ не «помнит» факты — он предсказывает, 
+        какой текст наиболее вероятен на основе того, что видел в обучающих данных.
+      </p>
+      <p>
+        <strong>Важно:</strong> никогда не доверяй ИИ на 100% в учёбе, медицине, юриспруденции или финансах. 
+        Всегда проверяй информацию через надёжные источники!
+      </p>
+    </section>
+
+    <section>
+      <h2>Как за 10 минут создать свой мини-сайт с ИИ</h2>
+      <p>
+        Не нужно знать программирование. Не нужны деньги. 
+        Достаточно 10 минут и желания начать.
+      </p>
+      <ol>
+        <li><strong>Зарегистрируйся на GitHub</strong> — бесплатно, за 2 минуты.</li>
+        <li><strong>Создай репозиторий</strong> с названием <code>вашеимя.github.io</code>.</li>
+        <li><strong>Добавь файл <code>index.html</code></strong> — даже простой текст заработает.</li>
+        <li><strong>Готово!</strong> Твой сайт жив по адресу: <code>https://вашеимя.github.io</code></li>
+      </ol>
+      <div style="text-align:center; margin:1.5rem 0;">
+        <img src="https://picsum.photos/600/300?grayscale&blur=1&random=2" alt="Мини-сайт на GitHub Pages" style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+        <p style="font-size:0.9rem; color:#666; margin-top:0.5rem;">GitHub Pages — твой бесплатный хостинг</p>
+      </div>
+      <p>
+        А теперь — как заработать?
+      </p>
+      <ul>
+        <li>Сделай сайт-визитку → бери заказы на фрилансе</li>
+        <li>Создай генератор цитат → монетизируй через донаты</li>
+        <li>Опиши свой ИИ-проект → привлеки инвестора или партнёра</li>
+      </ul>
+      <p>
+        Главное — начать. Остальное приложится.
+      </p>
+    </section>
+
+    <section>
+      <h2>Как создать Telegram-бота с ИИ и получать пассивный доход</h2>
+      <p>
+        Представь: каждый день тебе приходят деньги, а ты даже не встаёшь с дивана. 
+        Звучит как мечта? Но это реально — с Telegram-ботом и ИИ.
+      </p>
+      <ol>
+        <li>Ты создаёшь бота в Telegram (бесплатно)</li>
+        <li>Подключаешь его к бесплатному ИИ (например, через API или no-code сервис)</li>
+        <li>Люди пишут боту: «Напиши поздравление для мамы»</li>
+        <li>Бот отвечает — мгновенно, красиво, бесплатно (или за 50 ₽)</li>
+        <li>Ты получаешь оплату через Donatello, Boosty или Tinkoff Pay</li>
+      </ol>
+      <div style="text-align:center; margin:1.5rem 0;">
+        <img src="https://picsum.photos/600/300?grayscale&blur=1&random=3" alt="Telegram-бот с ИИ" style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+        <p style="font-size:0.9rem; color:#666; margin-top:0.5rem;">Бот работает 24/7 — даже пока ты спишь</p>
+      </div>
+      <p>
+        <strong>Пример:</strong> бот «Поздравлятор» — за неделю собрал 1200 ₽ на донатах. 
+        Люди платят за эмоции. А ИИ их создаёт.
+      </p>
+      <p>
+        Начни с простого: сделай бота, который генерирует цитаты. 
+        Выложи в канал — и добавь кнопку: «Поддержать автора». 
+        Уже через неделю ты увидишь первые переводы.
+      </p>
+    </section>
 
     <!-- Счётчик и кнопки -->
-    <div class="footer-extra">
-      <img src="https://views.whatilearened.today/views/github/otpysknik5-ship-it/Ai-websaite.svg?cache=reset"
-      <br><br>
-      <span>✨ Посетители сегодня: </span>
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://otpysknik5-ship-it.github.io/Ai-websaite/&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=сегодня&edge_flat=false" alt="счётчик посещений">
-      <br><br>
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fotpysknik5-ship-it.github.io%2FAi-websaite%2F&text=Смотри%2C%20крутой%20сайт%20про%20ИИ%21%20%D0%9D%D0%B5%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D0%B5%D0%B5%D1%82%20—%20%D0%BE%D0%B1%D1%8A%D1%8F%D1%81%D0%BD%D0%B8%D1%82%20%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%8B%D0%BC%D0%B8%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D0%BC%D0%B8%20%F0%9F%A4%96" 
+    <div style="text-align:center; margin:2rem 0;">
+      <img src="https://img.shields.io/badge/ИИ%20для%20всех-%F0%9F%A4%96-blue?style=flat&logo=github" alt="ИИ-сайт"><br><br>
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://ai-websait.pages.dev&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=сегодня&edge_flat=false" alt="счётчик посещений"><br><br>
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fai-websait.pages.dev&text=Смотри%2C%20крутой%20сайт%20про%20ИИ%21%20%D0%9D%D0%B5%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D0%B5%D0%B5%D1%82%20—%20%D0%BE%D0%B1%D1%8A%D1%8F%D1%81%D0%BD%D0%B8%D1%82%20%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%8B%D0%BC%D0%B8%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D0%BC%D0%B8%20%F0%9F%A4%96" 
            target="_blank"
-           style="display:inline-block; background:#0088cc; color:white; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:bold; box-shadow:0 2px 4px rgba(0,0,0,0.2);">
-        📤 Поделиться в Telegram
-      </a>
+           style="display:inline-block; background:#0088cc; color:white; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:bold; box-shadow:0 2px 4px rgba(0,0,0,0.2);">📤 Поделиться в Telegram</a>
       <br><br>
       <a href="https://t.me/SVIBRO" 
          target="_blank"
-         style="display:inline-block; background:#25D366; color:white; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:bold; box-shadow:0 2px 4px rgba(0,0,0,0.2);">
-        💬 Написать автору
-      </a>
+         style="display:inline-block; background:#25D366; color:white; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:bold; box-shadow:0 2px 4px rgba(0,0,0,0.2);">💬 Написать автору</a>
     </div>
 
-    <footer>
-      <p>© 2026 • Простой сайт про ИИ. Легко расширить!</p>
+    <footer style="text-align:center; padding:1.5rem; color:#777; font-size:0.9rem; border-top:1px solid #eee;">
+      © 2026 • Простой сайт про ИИ. Легко расширить!
     </footer>
   </div>
 
   <!-- Кнопка "Наверх" -->
-  <a href="#" class="back-to-top" id="backToTop">↑</a>
+  <a href="#" style="position:fixed; bottom:20px; right:20px; background:#6e8efb; color:white; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); opacity:0; visibility:hidden; transition:opacity 0.3s, visibility 0.3s; z-index:100;" id="backToTop">↑</a>
 
   <script>
     window.addEventListener('scroll', () => {
-      const button = document.getElementById('backToTop');
-      if (window.scrollY > 300) {
-        button.classList.add('show');
-      } else {
-        button.classList.remove('show');
-      }
+      const btn = document.getElementById('backToTop');
+      if (window.scrollY > 300) btn.style.cssText = 'opacity:1; visibility:visible;';
+      else btn.style.cssText = 'opacity:0; visibility:hidden;';
     });
   </script>
-<!-- Переключатель темы -->
-<button class="theme-toggle" id="themeToggle">🌙</button>
-
-<script>
-  // Загружаем сохранённую тему
-  const savedTheme = localStorage.getItem('theme');
-  const toggleBtn = document.getElementById('themeToggle');
-
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-theme');
-    toggleBtn.textContent = '☀️';
-  }
-
-  // Переключение
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    const isDark = document.body.classList.contains('dark-theme');
-    
-    if (isDark) {
-      localStorage.setItem('theme', 'dark');
-      toggleBtn.textContent = '☀️';
-    } else {
-      localStorage.setItem('theme', 'light');
-      toggleBtn.textContent = '🌙';
-    }
-  });
-</script>
-  <script src="https://cdn.counter.dev/script.js" data-id="29925970-1d4a-4ae0-a2e2-61db410accac" data-utcoffset="3"></script>
 </body>
 </html>
