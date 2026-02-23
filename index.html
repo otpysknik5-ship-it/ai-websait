@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ИИ для всех</title>
 
-  <!-- SEO -->
   <meta name="description" content="Простой сайт про искусственный интеллект: нейросети, ChatGPT, примеры, картинки, объяснения. Автор: Владимир.">
   <meta name="keywords" content="ИИ, искусственный интеллект, нейросети, ChatGPT, генерация изображений, Владимир">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="ИИ для всех — Просто об искусственном интеллекте">
   <meta property="og:description" content="Понятные статьи про нейросети, ChatGPT и технологии будущего. Автор: Владимир">
   <meta property="og:url" content="https://ai-websait.pages.dev/">
@@ -60,27 +58,9 @@
       flex: 1 1 250px;
     }
 
-    .note {
-      background: #fff3cd;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-top: 1.5rem;
-      border-left: 4px solid #ffc107;
-    }
-
     .img-wrapper {
       text-align: center;
       margin: 1.5rem 0 2rem;
-    }
-
-    .img-main {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      height: auto;
-      display: block;
-      margin: 0 auto;
     }
 
     .img-small {
@@ -139,7 +119,6 @@
 
     .back-to-top.show { opacity: 1; visibility: visible; }
 
-    /* Тёмная тема */
     body.dark-theme {
       background-color: #121212;
       color: #e0e0e0;
@@ -188,18 +167,9 @@
       backdrop-filter: blur(4px);
       color: #fff;
     }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 1.9rem; }
-      h2 { font-size: 1.3rem; }
-      .feature-card { padding: 1rem; }
-    }
   </style>
-
-  <script src="https://cdn.counter.dev/script.js"
-          data-id="5c32185b-aae0-4759-a9c6-5abb237eb30a"
-          data-utcoffset="3"></script>
 </head>
+
 <body>
 
 <header>
@@ -209,14 +179,10 @@
 
 <div class="container">
 
-  <!-- ТВОИ СТАТЬИ (оставлены без изменений) -->
-
-  <!-- Мои работы -->
   <section>
     <h2>Мои работы</h2>
     <p>Вот несколько моих любимых работ — те, что зажигают на других ресурсах:</p>
 
-    <!-- Котик -->
     <div class="img-wrapper">
       <img loading="lazy"
            src="https://raw.githubusercontent.com/otpysknik5-ship-it/ai-websait/main/кот%20и%20гитара.jpg"
@@ -225,7 +191,6 @@
       <p class="img-caption">Котик жжёт на гитаре — моя генерация в ИИ 😼🎸</p>
     </div>
 
-    <!-- Кара -->
     <div class="img-wrapper">
       <img loading="lazy"
            src="https://raw.githubusercontent.com/otpysknik5-ship-it/ai-websait/main/кара.jpg"
@@ -237,7 +202,6 @@
     <p>Видео пока не могу показать — платформы их блокируют. Но скажу одно: <strong>за ИИ — будущее.</strong></p>
   </section>
 
-  <!-- Счётчик и кнопки -->
   <div class="footer-extra">
     <img src="https://img.shields.io/badge/ИИ%20для%20всех-%F0%9F%A4%96-blue?style=flat&logo=github" alt="ИИ-сайт">
     <br><br>
@@ -246,24 +210,17 @@
          alt="Просмотры сайта"
          style="height:24px; vertical-align:middle;">
     <br><br>
-    <a href="https://t.me/share/url?url=https%3A%2F%2Fotpysknik5-ship-it.github.io%2Fai-websait%2F&text=Смотри%2C%20крутой%20сайт%20про%20ИИ%21"
+    <a href="https://ai-websait.pages.dev"
        target="_blank"
        style="display:inline-block; background:#0088cc; color:white; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:bold; box-shadow:0 2px 4px rgba(0,0,0,0.2);">
-      📤 Поделиться в Telegram
-    </a>
-    <br><br>
-    <a href="https://t.me/SVIBRO"
-       target="_blank"
-       style="display:inline-block; background:#25D366; color:white; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:bold; box-shadow:0 2px 4px rgba(0,0,0,0.2);">
-      💬 Написать автору
+      🌐 Перейти на сайт
     </a>
   </div>
 
   <footer>
     <p>© 2026 • ИИ для всех</p>
     <p style="font-size: 0.85rem; color: #888; margin-top: 0.5rem;">
-      📝 Автор: <a href="https://t.me/SVIBRO" style="color: #6e8efb; text-decoration: none;">Владимир</a> •
-      Сайт: <a href="https://ai-websait.pages.dev/" style="color: #6e8efb; text-decoration: none;">ai-websait.pages.dev</a>
+      Автор: Владимир • Сайт: <a href="https://ai-websait.pages.dev" style="color: #6e8efb; text-decoration: none;">ai-websait.pages.dev</a>
     </p>
   </footer>
 
@@ -273,17 +230,12 @@
 <button class="theme-toggle" id="themeToggle">🌙</button>
 
 <script>
-  // Кнопка "Наверх"
   window.addEventListener('scroll', () => {
     const button = document.getElementById('backToTop');
-    if (window.scrollY > 300) {
-      button.classList.add('show');
-    } else {
-      button.classList.remove('show');
-    }
+    if (window.scrollY > 300) button.classList.add('show');
+    else button.classList.remove('show');
   });
 
-  // Тёмная тема
   const savedTheme = localStorage.getItem('theme');
   const toggleBtn = document.getElementById('themeToggle');
 
@@ -302,6 +254,7 @@
 
 </body>
 </html>
+
 
 
 
