@@ -98,6 +98,85 @@
       backdrop-filter: blur(4px);
       color: white;
     }
+    /* === Кнопки переключения языка === */
+.lang-btn {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #6e8efb;
+  background: white;
+  color: #6e8efb;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.lang-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(110, 142, 251, 0.3);
+}
+
+.lang-btn.active,
+.lang-btn.active:hover {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(110, 142, 251, 0.4);
+}
+
+/* === Контент с анимацией === */
+.lang-content {
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Блок со статистикой === */
+.stats-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  font-weight: 500;
+  line-height: 1.5;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* === Адаптив === */
+@media (max-width: 600px) {
+  .lang-btn {
+    flex: 1;
+    min-width: 120px;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* === Тёмная тема === */
+body.dark-theme .lang-btn {
+  background: #1e1e1e;
+  color: #bb86fc;
+  border-color: #bb86fc;
+}
+body.dark-theme .lang-btn:hover {
+  background: #2a2a2a;
+  box-shadow: 0 4px 12px rgba(187, 134, 252, 0.25);
+}
+body.dark-theme .lang-btn.active,
+body.dark-theme .lang-btn.active:hover {
+  background: linear-gradient(135deg, #4a69bd, #6a89cc);
+  color: white;
+  border-color: transparent;
+}
+body.dark-theme .stats-box {
+  background: linear-gradient(135deg, #3a1c71, #2c2c54);
+  box-shadow: 0 4px 12px rgba(187, 134, 252, 0.2);
+}
   </style> 
 <script src="https://cdn.counter.dev/script.js" data-id="5c32185b-aae0-4759-a9c6-5abb237eb30a" data-utcoffset="3"></script>
 </head>
@@ -289,6 +368,69 @@
         А главное — вдохновение.
       </p>
     </section>
+    <section>
+  <h2>👁️ ИИ видит то, что не замечают врачи</h2>
+  
+  <!-- Переключатель языка -->
+  <div style="display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap;">
+    <button class="lang-btn active" onclick="showLang('ru', this)">🇷🇺 Русский</button>
+    <button class="lang-btn" onclick="showLang('en', this)">🇬🇧 English</button>
+  </div>
+  
+  <!-- Русский контент -->
+  <div id="ru" class="lang-content">
+    <h3>Как ИИ спасает зрение миллионам</h3>
+    <p>Каждый год <strong>миллионы людей</strong> теряют зрение из-за диабетической ретинопатии — осложнения диабета, которое повреждает сосуды глаза.</p>
+    
+    <p>Проблема: во многих регионах мира просто <strong>не хватает врачей-офтальмологов</strong>. Люди ждут диагностики месяцами… а болезнь прогрессирует.</p>
+    
+    <p><strong>Решение:</strong> ИИ-система <strong>IDx-DR</strong> анализирует фото сетчатки за 1 минуту и ставит диагноз с точностью до 96%.</p>
+    
+    <div class="stats-box">
+      🎯 <strong>Факты:</strong><br>
+      • Первый ИИ-диагност, одобренный <strong>FDA</strong> (США) без участия врача<br>
+      • Точность: <strong>96%</strong> — как у опытного специалиста<br>
+      • Работает в Индии, Таиланде, США — там, где врачей не хватает
+    </div>
+    
+    <p><em>Источник: FDA, 2018 • Digital Diagnostics / IDx-DR</em></p>
+    
+    <div style="text-align:center; margin:1.5rem 0;">
+      <img src="https://picsum.photos/600/300?grayscale&blur=1&random=eye" 
+           alt="ИИ анализирует снимок сетчатки" 
+           loading="lazy"
+           style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <p style="font-size:0.9rem; color:#666; margin-top:0.5rem;">ИИ находит микроскопические повреждения сосудов, невидимые глазу</p>
+    </div>
+  </div>
+  
+  <!-- English content -->
+  <div id="en" class="lang-content" style="display: none;">
+    <h3>How AI Is Saving Sight for Millions</h3>
+    <p>Every year, <strong>millions of people</strong> lose their vision due to diabetic retinopathy — a diabetes complication that damages blood vessels in the eye.</p>
+    
+    <p>The problem: in many parts of the world, there simply <strong>aren't enough ophthalmologists</strong>. People wait months for diagnosis… while the disease progresses.</p>
+    
+    <p><strong>The solution:</strong> AI system <strong>IDx-DR</strong> analyzes a retinal photo in 1 minute and diagnoses with up to 96% accuracy.</p>
+    
+    <div class="stats-box">
+      🎯 <strong>Key Facts:</strong><br>
+      • First AI diagnostic tool approved by <strong>FDA</strong> (USA) to work without a doctor<br>
+      • Accuracy: <strong>96%</strong> — on par with experienced specialists<br>
+      • Deployed in India, Thailand, USA — where doctors are scarce
+    </div>
+    
+    <p><em>Source: FDA, 2018 • Digital Diagnostics / IDx-DR</em></p>
+    
+    <div style="text-align:center; margin:1.5rem 0;">
+      <img src="https://picsum.photos/600/300?grayscale&blur=1&random=eye2" 
+           alt="AI analyzing retinal scan" 
+           loading="lazy"
+           style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <p style="font-size:0.9rem; color:#666; margin-top:0.5rem;">AI detects microscopic vessel damage invisible to the human eye</p>
+    </div>
+  </div>
+</section>
 
     <section>
       <h2>Китайские роботы уже крутят сальто. А вы думали, ИИ — это только чат-боты?</h2>
@@ -422,7 +564,21 @@
         toggleBtn.textContent = '🌙';
       }
     });
-  </script>
+    <script>
+function showLang(lang, btn) {
+  document.querySelectorAll('.lang-content').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(lang).style.display = 'block';
+  btn.classList.add('active');
+  localStorage.setItem('site-lang', lang);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('site-lang') || 'ru';
+  const btn = document.querySelector(`.lang-btn[onclick*="'${saved}'"]`);
+  if (btn) showLang(saved, btn);
+});
+</script>
 </body>
 </html>
 
