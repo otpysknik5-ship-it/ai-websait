@@ -152,13 +152,13 @@ body.dark-theme h3 { color: #ccc; }
 }
 
 .work-card img {
-  width: 100%;
-  height: auto;  /* ← Автовысота, без обрезки */
-  max-height: 500px;  /* ← Ограничение, но не обрезка */
-  object-fit: contain;  /* ← Показывает всю картинку! */
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px 8px 0 0;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 500px !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+  border-radius: 8px 8px 0 0 !important;
 }
 
 .work-card p {
