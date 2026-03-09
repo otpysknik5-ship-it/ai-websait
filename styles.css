@@ -431,17 +431,17 @@ footer a:hover {
   margin: 30px 0;
 }
 
-.eye-figure img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-
 .eye-figure figcaption {
   color: #666;
   font-size: 0.9rem;
   margin-top: 10px;
+}
+  .eye-figure img {
+  width: 100%;
+  max-width: 400px; /* ограничение размера */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 }
