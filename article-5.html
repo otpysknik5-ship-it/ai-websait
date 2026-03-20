@@ -151,6 +151,64 @@
       h1 { font-size: 2.6rem; }
       .wrapper { padding: 40px 24px 80px; }
     }
+    /* Светлая тема */
+body[data-theme="light"] {
+  background: #f5f5f5;
+  color: #0f1014;
+}
+
+body[data-theme="light"] .wrapper {
+  background: #ffffff;
+}
+
+body[data-theme="light"] .back-link {
+  color: #667eea;
+  border-color: #667eea;
+}
+
+/* Кнопка наверх */
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+}
+
+/* Кнопка темы */
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 90px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
   </style>
 
 </head>
