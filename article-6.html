@@ -256,6 +256,11 @@
       }
     }
   </style>
+  <!-- Переключатель темы -->
+<button id="themeToggle" class="theme-toggle" aria-label="Переключить тему">
+  <span class="icon-sun">☀️</span>
+  <span class="icon-moon">🌙</span>
+</button>
 </head>
 <body>
   <div class="page">
@@ -561,6 +566,12 @@
     localStorage.setItem('theme', newTheme);
   });
 </script>
+  </div> 
+  <!-- Кнопка Наверх -->
+<button id="backToTop" class="back-to-top" aria-label="Наверх">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
  </body>
-  </div>
  </html>
