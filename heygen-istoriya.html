@@ -95,6 +95,44 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             z-index: 1000;
         }
+                /* Кнопки */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 52px;
+            height: 52px;
+            background: #FF7F00;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 26px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(255,127,0,0.5);
+            z-index: 1000;
+        }
+        #themeToggle {
+            position: fixed;
+            bottom: 95px;
+            right: 30px;
+            width: 52px;
+            height: 52px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            z-index: 1000;
+        }
+        body[data-theme="dark"] #themeToggle {
+            background: #f4a261;
+            color: #222;
+        }
     </style>
 </head>
 <body>
@@ -189,12 +227,12 @@
     <p>Статья написана для канала @abu_quotes_bot — подписывайтесь на обзоры ИИ-инструментов! 🚀</p>
 </div>
 
-<!-- Кнопки -->
+<!-- Кнопки: Наверх и Переключатель темы -->
 <button id="backToTop" title="Наверх">↑</button>
 <button id="themeToggle" aria-label="Переключить тему">🌙</button>
 
 <script>
-    // Переключатель темы
+    // === Переключатель темы ===
     const themeToggle = document.getElementById('themeToggle');
     const root = document.documentElement;
 
@@ -211,21 +249,26 @@
         updateThemeIcon();
     });
 
+    // Загрузка сохранённой темы при открытии страницы
     if (localStorage.getItem('theme') === 'dark') {
         root.setAttribute('data-theme', 'dark');
     }
     updateThemeIcon();
 
-    // Кнопка наверх
+    // === Кнопка "Наверх" ===
     const backToTop = document.getElementById('backToTop');
+    
     window.addEventListener('scroll', () => {
-        backToTop.style.display = (window.pageYOffset > 400) ? 'flex' : 'none';
+        if (window.pageYOffset > 400) {
+            backToTop.style.display = 'flex';
+        } else {
+            backToTop.style.display = 'none';
+        }
     });
 
     backToTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
-
 </body>
 </html>
