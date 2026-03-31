@@ -133,6 +133,32 @@
             background: #f4a261;
             color: #222;
         }
+        /* Тёмная тема (по умолчанию) */
+.ai-article {
+    background: #1a1a2e;
+    color: #e0e0e0;
+}
+
+/* Светлая тема */
+[data-theme="light"] .ai-article {
+    background: #ffffff;
+    color: #1a1a2e;
+}
+
+[data-theme="light"] .info-block {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+[data-theme="light"] .article-header h1,
+[data-theme="light"] .article-section h2 {
+    color: #1a1a2e;
+}
+
+[data-theme="light"] .btn-secondary {
+    background: transparent;
+    color: #6366f1;
+    border: 2px solid #6366f1;
+}
     </style>
 </head>
 <body>
@@ -272,6 +298,30 @@
     backToTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+</script>
+    <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    
+    // Проверяем сохранённую тему
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+    
+    // Переключатель
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+    
+    // Обновляем иконку
+    function updateThemeIcon(theme) {
+        themeToggle.textContent = theme === 'dark' ? '🌙' : '☀️';
+    }
 </script>
 </body>
 </html>
